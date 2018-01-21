@@ -1,0 +1,6 @@
+framework module Pods_Phenomena {
+  umbrella header "Pods-Phenomena-umbrella.h"
+
+  export *
+  module * { export * }
+}

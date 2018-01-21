@@ -1,0 +1,6 @@
+framework module Pods_PhenomenaTests {
+  umbrella header "Pods-PhenomenaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
