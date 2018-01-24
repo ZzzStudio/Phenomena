@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		128C42AA2018F317007471FA /* WeatherDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C42A92018F317007471FA /* WeatherDisplayViewController.swift */; };
 		129374C5200FA1940012B857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374C4200FA1940012B857 /* AppDelegate.swift */; };
 		129374C7200FA1940012B857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374C6200FA1940012B857 /* ViewController.swift */; };
 		129374CA200FA1940012B857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129374C8200FA1940012B857 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		128C42A92018F317007471FA /* WeatherDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayViewController.swift; sourceTree = "<group>"; };
 		129374C1200FA1940012B857 /* Phenomena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phenomena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129374C4200FA1940012B857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		129374C6200FA1940012B857 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		128C42A62018F2AD007471FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		128C42A72018F2AD007471FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		128C42A82018F2AD007471FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				128C42A92018F317007471FA /* WeatherDisplayViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		129374B8200FA1940012B857 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +138,9 @@
 		129374C3200FA1940012B857 /* Phenomena */ = {
 			isa = PBXGroup;
 			children = (
+				128C42A82018F2AD007471FA /* Controller */,
+				128C42A62018F2AD007471FA /* Network */,
+				128C42A72018F2AD007471FA /* View */,
 				129374C4200FA1940012B857 /* AppDelegate.swift */,
 				129374C6200FA1940012B857 /* ViewController.swift */,
 				129374C8200FA1940012B857 /* Main.storyboard */,
@@ -464,6 +491,7 @@
 			files = (
 				129374C7200FA1940012B857 /* ViewController.swift in Sources */,
 				129374C5200FA1940012B857 /* AppDelegate.swift in Sources */,
+				128C42AA2018F317007471FA /* WeatherDisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
