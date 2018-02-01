@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,5 +23,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func onGetButtonTapped(_ sender: Any) {
+        let apiKey = "TAkhjf8d1nlSlspN"
+        let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
+        Alamofire.request(url).responseJSON { (response) in
+            print(response)
+        }
+    }
 }
 
