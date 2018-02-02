@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import RealmSwift
 
 let apiKey = "H9XapP=AcedlI-nY"
 let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
@@ -21,10 +22,12 @@ class GetRealTimeWeatherRequest {
             print(response.data!)     // server data
             print(response.result)   // result of response serialization
             
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-                completionHandler(JSON)
-            }
+//            if let JSON = response.result.value {
+//                let realm = try! Realm()
+//                let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
+//                realm.create(RealTimeWeather, value: json, update: true);
+//                completionHandler(JSON)
+//            }
         }
         
     }
