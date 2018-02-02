@@ -24,10 +24,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onGetButtonTapped(_ sender: Any) {
-        let apiKey = "TAkhjf8d1nlSlspN"
+        let apiKey = "H9XapP=AcedlI-nY"
         let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
-        Alamofire.request(url).responseJSON { (response) in
-            print(response)
+        Alamofire.request(url).responseJSON { response in
+            print(response.request!)  // original URL request
+            print(response.response!) // URL response
+            print(response.data!)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
         }
     }
 }
