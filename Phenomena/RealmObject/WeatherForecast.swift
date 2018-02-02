@@ -11,6 +11,8 @@ import RealmSwift
 
 class WeatherForecast: Object {
     
+//    @objc dynamic var status = ""
+    
 // Specify properties to ignore (Realm won't persist these)
     
 //  override static func ignoredProperties() -> [String] {

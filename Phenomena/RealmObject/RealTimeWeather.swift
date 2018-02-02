@@ -11,6 +11,14 @@ import RealmSwift
 
 class RealTimeWeather: Object {
     
+    @objc dynamic var status = ""
+    @objc dynamic var lang = ""
+    @objc dynamic var server_time = 0
+    @objc dynamic var tzshift = 0
+    @objc dynamic var location = 0
+    @objc dynamic var unit = ""
+    @objc dynamic var result: Any?
+    
 // Specify properties to ignore (Realm won't persist these)
     
 //  override static func ignoredProperties() -> [String] {
