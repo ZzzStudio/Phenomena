@@ -6,6 +6,7 @@ target 'Phenomena' do
   # Pods for Phenomena
 
   pod 'Alamofire', '~> 4.5'
+  pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'RealmSwift'
 
 

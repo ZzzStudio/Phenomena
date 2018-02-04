@@ -17,7 +17,11 @@ class RealTimeWeather: Object {
     @objc dynamic var tzshift = 0
     @objc dynamic var location = 0
     @objc dynamic var unit = ""
-    @objc dynamic var result: Any?
+    @objc dynamic var result = ""
+    
+    override static func primaryKey() -> String? {
+        return "location"
+    }
     
 // Specify properties to ignore (Realm won't persist these)
     

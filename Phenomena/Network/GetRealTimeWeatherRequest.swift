@@ -22,11 +22,16 @@ class GetRealTimeWeatherRequest {
             print(response.data!)     // server data
             print(response.result)   // result of response serialization
             
+            
+//            let realm = try! Realm()
+//            let json = try! JSONSerialization.jsonObject(with: response.data!, options: [])
+//            realm.create(RealTimeWeather.self, value: json, update: true);
 //            if let JSON = response.result.value {
+//                print(JSON)
 //                let realm = try! Realm()
-//                let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
-//                realm.create(RealTimeWeather, value: json, update: true);
-//                completionHandler(JSON)
+//                let json = try! JSONSerialization.jsonObject(with: response.data!, options: [])
+//                realm.create(RealTimeWeather.self, value: json, update: true);
+////                completionHandler(JSON)
 //            }
         }
         
