@@ -1,8 +1,8 @@
 //
-//  RealTimeWeather.swift
+//  WeatherRealTime.swift
 //  Phenomena
 //
-//  Created by toedwy on 2018/2/2.
+//  Created by toedwy on 2018/2/5.
 //Copyright © 2018年 Zzz Studio. All rights reserved.
 //
 
@@ -10,15 +10,19 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-class RealTimeWeather: Object, Mappable {
+class DoubleObject: Object {
+    @objc dynamic var value: Double = 0.0
+}
+
+class WeatherRealTime: Object, Mappable {
     
     @objc dynamic var status = ""
     @objc dynamic var lang = ""
     @objc dynamic var serverTime = 0
     @objc dynamic var timeZoneShift = 0
-    @objc dynamic var location = 0
+    var location = List<DoubleObject>()
     @objc dynamic var unit = ""
-//    @objc dynamic var result = ""
+    @objc dynamic var result: WeatherRealTimePrimaryResult?
     
     override static func primaryKey() -> String? {
         return "status"
@@ -33,13 +37,16 @@ class RealTimeWeather: Object, Mappable {
         lang <- map["lang"]
         serverTime <- map["server_time"]
         timeZoneShift <- map["tzshift"]
+        
+        var location:[Double]? = nil
         location <- map["location"]
+        location?.forEach { value in
+            let c = DoubleObject()
+            c.value = value
+            self.location.append(c)
+        }
+        
         unit <- map["unit"]
+        result <- map["result"]
     }
-    
-// Specify properties to ignore (Realm won't persist these)
-    
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
 }

@@ -17,7 +17,7 @@ let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json
 class GetRealTimeWeatherRequest {
     
     class func getRealTimeWeather(_ location: String, completionHandler: @escaping (_ result: Any?) -> Void) {
-        Alamofire.request(url).responseObject { (response: DataResponse<RealTimeWeather>) in
+        Alamofire.request(url).responseObject { (response: DataResponse<WeatherRealTime>) in
             let realTimeWeather = response.result.value
             print(realTimeWeather!)
             
