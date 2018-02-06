@@ -24,6 +24,8 @@
 		129374CF200FA1940012B857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129374CD200FA1940012B857 /* LaunchScreen.storyboard */; };
 		129374DA200FA1940012B857 /* PhenomenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374D9200FA1940012B857 /* PhenomenaTests.swift */; };
 		129374E5200FA1940012B857 /* PhenomenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374E4200FA1940012B857 /* PhenomenaUITests.swift */; };
+		12DB08F5202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */; };
+		12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */; };
 		599936647C03A9F8624F1CD2 /* Pods_Phenomena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9731FFD5D29EB2A9A35AC9 /* Pods_Phenomena.framework */; };
 		9280397F5332A950E78727D7 /* Pods_PhenomenaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4277781D8AC7AA9BE1A232C5 /* Pods_PhenomenaUITests.framework */; };
 		E6F0F137C7D238EF62B87116 /* Pods_PhenomenaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CF5FA1C316FFC530E7EE43 /* Pods_PhenomenaTests.framework */; };
@@ -70,6 +72,8 @@
 		129374E0200FA1940012B857 /* PhenomenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhenomenaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		129374E4200FA1940012B857 /* PhenomenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenaUITests.swift; sourceTree = "<group>"; };
 		129374E6200FA1940012B857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultDoubleValue.swift; sourceTree = "<group>"; };
+		12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultStringValue.swift; sourceTree = "<group>"; };
 		1C38F881F5A27A0E524C860A /* Pods-PhenomenaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhenomenaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhenomenaTests/Pods-PhenomenaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F9731FFD5D29EB2A9A35AC9 /* Pods_Phenomena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phenomena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4277781D8AC7AA9BE1A232C5 /* Pods_PhenomenaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhenomenaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +147,8 @@
 				1227ED02202898E300BD0C0C /* GeographicPrecipitationLocal.swift */,
 				1227ED042028992900BD0C0C /* PrecipitationDescription.swift */,
 				1227ED0820289C5200BD0C0C /* WeatherRealTimePrimaryResult.swift */,
+				12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */,
+				12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */,
 			);
 			path = RealmObject;
 			sourceTree = "<group>";
@@ -530,6 +536,7 @@
 			files = (
 				129374C7200FA1940012B857 /* ViewController.swift in Sources */,
 				1227ECF22024BCD700BD0C0C /* WeatherForecast.swift in Sources */,
+				12DB08F5202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift in Sources */,
 				1227ED01202898C800BD0C0C /* GeographicPrecipitationNearest.swift in Sources */,
 				1227ED052028992900BD0C0C /* PrecipitationDescription.swift in Sources */,
 				1227ECFF2028970000BD0C0C /* WindDescription.swift in Sources */,
@@ -538,6 +545,7 @@
 				128C42AC2024B871007471FA /* GetRealTimeWeatherRequest.swift in Sources */,
 				128C42AE2024B8A8007471FA /* GetWeatherForecastRequest.swift in Sources */,
 				128C42AA2018F317007471FA /* WeatherDisplayViewController.swift in Sources */,
+				12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */,
 				1227ED03202898E300BD0C0C /* GeographicPrecipitationLocal.swift in Sources */,
 				1227ED0920289C5200BD0C0C /* WeatherRealTimePrimaryResult.swift in Sources */,
 			);
