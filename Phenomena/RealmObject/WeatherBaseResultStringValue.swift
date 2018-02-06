@@ -8,12 +8,23 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class WeatherBaseResultStringValue: Object {
+class WeatherBaseResultStringValue: Object, Mappable {
     
-// Specify properties to ignore (Realm won't persist these)
+    @objc dynamic var dateTime = ""
+    @objc dynamic var value = ""
     
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    //    override static func primaryKey() -> String? {
+    //        return ""
+    //    }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        dateTime <- map["datetime"]
+        value <- map["value"]
+    }
 }

@@ -1,8 +1,8 @@
 //
-//  GeographicPrecipitationNearest.swift
+//  WeatherBaseResultStringValueLite.swift
 //  Phenomena
 //
-//  Created by toedwy on 2018/2/5.
+//  Created by toedwy on 2018/2/7.
 //Copyright © 2018年 Zzz Studio. All rights reserved.
 //
 
@@ -10,12 +10,10 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-class GeographicPrecipitationNearest: Object, Mappable {
+class WeatherBaseResultStringValueLite: Object, Mappable {
     
-    
-    @objc dynamic var status = ""
-    @objc dynamic var distance = 0
-    @objc dynamic var intensity = 0
+    @objc dynamic var date = ""
+    @objc dynamic var value = ""
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -26,8 +24,7 @@ class GeographicPrecipitationNearest: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        distance <- map["distance"]
-        intensity <- map["intensity"]
+        date <- map["date"]
+        value <- map["value"]
     }
 }
