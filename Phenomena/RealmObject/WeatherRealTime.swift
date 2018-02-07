@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-class DoubleObject: Object {
-    @objc dynamic var value: Double = 0.0
-}
+//class DoubleObject: Object {
+//    @objc dynamic var value: Double = 0.0
+//}
 
 class WeatherRealTime: Object, Mappable {
     
