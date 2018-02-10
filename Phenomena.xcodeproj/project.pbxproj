@@ -19,6 +19,7 @@
 		12439B4E202A151800383839 /* WeatherBaseResultStringValueLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12439B4D202A151800383839 /* WeatherBaseResultStringValueLite.swift */; };
 		126F2477202B48CC003CF9BB /* WeatherAlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F2476202B48CC003CF9BB /* WeatherAlertMessage.swift */; };
 		126F2479202B4A9E003CF9BB /* RealmBasicTypeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F2478202B4A9E003CF9BB /* RealmBasicTypeObject.swift */; };
+		1274AB43202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274AB42202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift */; };
 		128C42AA2018F317007471FA /* WeatherDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C42A92018F317007471FA /* WeatherDisplayViewController.swift */; };
 		128C42AC2024B871007471FA /* GetRealTimeWeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C42AB2024B871007471FA /* GetRealTimeWeatherRequest.swift */; };
 		128C42AE2024B8A8007471FA /* GetWeatherForecastRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C42AD2024B8A8007471FA /* GetWeatherForecastRequest.swift */; };
@@ -66,6 +67,7 @@
 		12439B4D202A151800383839 /* WeatherBaseResultStringValueLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultStringValueLite.swift; sourceTree = "<group>"; };
 		126F2476202B48CC003CF9BB /* WeatherAlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertMessage.swift; sourceTree = "<group>"; };
 		126F2478202B4A9E003CF9BB /* RealmBasicTypeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmBasicTypeObject.swift; sourceTree = "<group>"; };
+		1274AB42202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastPrimaryResult.swift; sourceTree = "<group>"; };
 		128C42A92018F317007471FA /* WeatherDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayViewController.swift; sourceTree = "<group>"; };
 		128C42AB2024B871007471FA /* GetRealTimeWeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimeWeatherRequest.swift; sourceTree = "<group>"; };
 		128C42AD2024B8A8007471FA /* GetWeatherForecastRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherForecastRequest.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				12439B4D202A151800383839 /* WeatherBaseResultStringValueLite.swift */,
 				126F2476202B48CC003CF9BB /* WeatherAlertMessage.swift */,
 				126F2478202B4A9E003CF9BB /* RealmBasicTypeObject.swift */,
+				1274AB42202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift */,
 			);
 			path = RealmObject;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				128C42AE2024B8A8007471FA /* GetWeatherForecastRequest.swift in Sources */,
 				128C42AA2018F317007471FA /* WeatherDisplayViewController.swift in Sources */,
 				126F2477202B48CC003CF9BB /* WeatherAlertMessage.swift in Sources */,
+				1274AB43202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift in Sources */,
 				12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */,
 				12439B4E202A151800383839 /* WeatherBaseResultStringValueLite.swift in Sources */,
 				1227ED03202898E300BD0C0C /* GeographicPrecipitationLocal.swift in Sources */,

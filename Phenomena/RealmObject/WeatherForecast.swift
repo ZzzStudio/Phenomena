@@ -20,9 +20,9 @@ class WeatherForecast: Object, Mappable {
     @objc dynamic var unit = ""
 //    @objc dynamic var result: WeatherRealTimePrimaryResult?
     
-    override static func primaryKey() -> String? {
-        return "status"
-    }
+//    override static func primaryKey() -> String? {
+//        return ""
+//    }
     
     required convenience init?(map: Map) {
         self.init()
