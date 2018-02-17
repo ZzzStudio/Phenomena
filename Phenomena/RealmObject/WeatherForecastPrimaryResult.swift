@@ -13,10 +13,10 @@ import ObjectMapper
 class WeatherForecastPrimaryResult: Object, Mappable {
     
     @objc dynamic var status = ""
-//    @objc dynamic var hourly
-//    @objc dynamic var minutely
-//    @objc dynamic var daily
-//    @objc dynamic var alert
+    @objc dynamic var hourly = ""
+    @objc dynamic var minutely = ""
+    @objc dynamic var daily = ""
+    @objc dynamic var alert = ""
     
 //    override static func primaryKey() -> String? {
 //        return ""
@@ -28,9 +28,9 @@ class WeatherForecastPrimaryResult: Object, Mappable {
     
     func mapping(map: Map) {
         status <- map["status"]
-//        hourly <- map["hourly"]
-//        minutely <- map["minutely"]
-//        daily <- map["daily"]
-//        alert <- map["alert"]
+        hourly <- map["hourly"]
+        minutely <- map["minutely"]
+        daily <- map["daily"]
+        alert <- map["alert"]
     }
 }
