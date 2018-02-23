@@ -12,7 +12,6 @@ import ObjectMapper
 
 class GeographicPrecipitationNearest: Object, Mappable {
     
-    
     @objc dynamic var status = ""
     @objc dynamic var distance = 0
     @objc dynamic var intensity = 0

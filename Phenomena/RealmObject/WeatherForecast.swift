@@ -12,14 +12,14 @@ import ObjectMapper
 
 class WeatherForecast: Object, Mappable {
     
-    @objc dynamic var status = ""
-    @objc dynamic var lang = ""
-    @objc dynamic var result: WeatherRealTimePrimaryResult?
-    @objc dynamic var serverTime = 0
-    @objc dynamic var apiStatus = ""
-    @objc dynamic var timeZoneShift = 0
-    @objc dynamic var apiVersion = ""
-    @objc dynamic var unit = ""
+    @objc dynamic var status: String?
+    @objc dynamic var lang: String?
+    @objc dynamic var result: WeatherForecastPrimaryResult?
+    var serverTime: RealmOptional<Double>?
+    @objc dynamic var apiStatus: String?
+    var timeZoneShift: RealmOptional<Int>?
+    @objc dynamic var apiVersion: String?
+    @objc dynamic var unit: String?
     var location = List<DoubleObject>()
     
 //    override static func primaryKey() -> String? {
@@ -31,14 +31,15 @@ class WeatherForecast: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        lang <- map["lang"]
-        result <- map["result"]
-        serverTime <- map["server_time"]
-        apiStatus <- map["api_status"]
-        timeZoneShift <- map["tzshift"]
-        apiVersion <- map["api_version"]
-        unit <- map["unit"]
+        status          <- map["status"]
+        lang            <- map["lang"]
+        result          <- map["result"]
+        serverTime      <- map["server_time"]
+        apiStatus       <- map["api_status"]
+        timeZoneShift   <- map["tzshift"]
+        apiVersion      <- map["api_version"]
+        unit            <- map["unit"]
+        
         var location:[Double]? = nil
         location <- map["location"]
         location?.forEach { value in
