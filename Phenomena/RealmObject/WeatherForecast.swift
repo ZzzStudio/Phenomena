@@ -14,11 +14,13 @@ class WeatherForecast: Object, Mappable {
     
     @objc dynamic var status = ""
     @objc dynamic var lang = ""
+    @objc dynamic var result: WeatherRealTimePrimaryResult?
     @objc dynamic var serverTime = 0
+    @objc dynamic var apiStatus = ""
     @objc dynamic var timeZoneShift = 0
-    var location = List<DoubleObject>()
+    @objc dynamic var apiVersion = ""
     @objc dynamic var unit = ""
-//    @objc dynamic var result: WeatherRealTimePrimaryResult?
+    var location = List<DoubleObject>()
     
 //    override static func primaryKey() -> String? {
 //        return ""
@@ -31,9 +33,12 @@ class WeatherForecast: Object, Mappable {
     func mapping(map: Map) {
         status <- map["status"]
         lang <- map["lang"]
+        result <- map["result"]
         serverTime <- map["server_time"]
+        apiStatus <- map["api_status"]
         timeZoneShift <- map["tzshift"]
-        
+        apiVersion <- map["api_version"]
+        unit <- map["unit"]
         var location:[Double]? = nil
         location <- map["location"]
         location?.forEach { value in
@@ -41,8 +46,5 @@ class WeatherForecast: Object, Mappable {
             c.value = value
             self.location.append(c)
         }
-        
-        unit <- map["unit"]
-//        result <- map["result"]
     }
 }

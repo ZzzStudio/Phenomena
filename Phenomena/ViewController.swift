@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onGetButtonTapped(_ sender: Any) {
-        GetRealTimeWeatherRequest .getRealTimeWeather("location") { (result) in
+        GetRealTimeWeatherRequest.getRealTimeWeather("location") { (result) in
             print(result!)
         }
 //        let apiKey = "H9XapP=AcedlI-nY"
