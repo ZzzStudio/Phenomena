@@ -14,6 +14,7 @@ class WeatherForecastMinutely: Object, Mappable {
     
     @objc dynamic var status: String?
     @objc dynamic var descriptionMinutely: String?
+    @objc dynamic var dataSource: String?
     var probability = List<DoubleObject>()
     var precipitation2h = List<DoubleObject>()
     var precipitation = List<DoubleObject>()
@@ -29,6 +30,7 @@ class WeatherForecastMinutely: Object, Mappable {
     func mapping(map: Map) {
         status                  <- map["status"]
         descriptionMinutely     <- map["description"]
+        dataSource              <- map["datasource"]
         
         var probability:[Double]? = nil
         probability <- map["probability"]

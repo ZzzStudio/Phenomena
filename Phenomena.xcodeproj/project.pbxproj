@@ -10,6 +10,9 @@
 		1206EDE12040677800554A8A /* WeatherForecastHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE02040677800554A8A /* WeatherForecastHourly.swift */; };
 		1206EDE32040681400554A8A /* WeatherForecastMinutely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE22040681400554A8A /* WeatherForecastMinutely.swift */; };
 		1206EDE52040683C00554A8A /* WeatherForecastDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE42040683C00554A8A /* WeatherForecastDaily.swift */; };
+		1206EDE720431C6400554A8A /* WeatherBaseResultIndexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE620431C6400554A8A /* WeatherBaseResultIndexValue.swift */; };
+		1206EDE92043202100554A8A /* AstronomyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE82043202100554A8A /* AstronomyDescription.swift */; };
+		1206EDEB204320A400554A8A /* SunDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDEA204320A400554A8A /* SunDescription.swift */; };
 		1227ECF22024BCD700BD0C0C /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ECF12024BCD700BD0C0C /* WeatherForecast.swift */; };
 		1227ECFD2028957700BD0C0C /* WeatherRealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ECFC2028957700BD0C0C /* WeatherRealTime.swift */; };
 		1227ECFF2028970000BD0C0C /* WindDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ECFE2028970000BD0C0C /* WindDescription.swift */; };
@@ -61,6 +64,9 @@
 		1206EDE02040677800554A8A /* WeatherForecastHourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastHourly.swift; sourceTree = "<group>"; };
 		1206EDE22040681400554A8A /* WeatherForecastMinutely.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastMinutely.swift; sourceTree = "<group>"; };
 		1206EDE42040683C00554A8A /* WeatherForecastDaily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastDaily.swift; sourceTree = "<group>"; };
+		1206EDE620431C6400554A8A /* WeatherBaseResultIndexValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultIndexValue.swift; sourceTree = "<group>"; };
+		1206EDE82043202100554A8A /* AstronomyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDescription.swift; sourceTree = "<group>"; };
+		1206EDEA204320A400554A8A /* SunDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunDescription.swift; sourceTree = "<group>"; };
 		1227ECF12024BCD700BD0C0C /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		1227ECFC2028957700BD0C0C /* WeatherRealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRealTime.swift; sourceTree = "<group>"; };
 		1227ECFE2028970000BD0C0C /* WindDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindDescription.swift; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 				1206EDE22040681400554A8A /* WeatherForecastMinutely.swift */,
 				1206EDE42040683C00554A8A /* WeatherForecastDaily.swift */,
 				1227ECFE2028970000BD0C0C /* WindDescription.swift */,
+				1206EDEA204320A400554A8A /* SunDescription.swift */,
+				1206EDE82043202100554A8A /* AstronomyDescription.swift */,
 				1227ED00202898C800BD0C0C /* GeographicPrecipitationNearest.swift */,
 				1227ED02202898E300BD0C0C /* GeographicPrecipitationLocal.swift */,
 				1227ED042028992900BD0C0C /* PrecipitationDescription.swift */,
@@ -174,6 +182,7 @@
 				12439B49202A110100383839 /* WeatherBaseResultIntervalValue.swift */,
 				12439B4B202A12BC00383839 /* WeatherBaseResultVectorValue.swift */,
 				12439B4D202A151800383839 /* WeatherBaseResultStringValueLite.swift */,
+				1206EDE620431C6400554A8A /* WeatherBaseResultIndexValue.swift */,
 				126F2476202B48CC003CF9BB /* WeatherAlertMessage.swift */,
 				126F2478202B4A9E003CF9BB /* RealmBasicTypeObject.swift */,
 			);
@@ -569,7 +578,10 @@
 				12439B4C202A12BC00383839 /* WeatherBaseResultVectorValue.swift in Sources */,
 				12DB08F5202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift in Sources */,
 				1227ED01202898C800BD0C0C /* GeographicPrecipitationNearest.swift in Sources */,
+				1206EDE92043202100554A8A /* AstronomyDescription.swift in Sources */,
+				1206EDEB204320A400554A8A /* SunDescription.swift in Sources */,
 				1227ED052028992900BD0C0C /* PrecipitationDescription.swift in Sources */,
+				1206EDE720431C6400554A8A /* WeatherBaseResultIndexValue.swift in Sources */,
 				1206EDE12040677800554A8A /* WeatherForecastHourly.swift in Sources */,
 				1227ECFF2028970000BD0C0C /* WindDescription.swift in Sources */,
 				1227ECFD2028957700BD0C0C /* WeatherRealTime.swift in Sources */,

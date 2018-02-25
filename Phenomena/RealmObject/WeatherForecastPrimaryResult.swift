@@ -19,9 +19,9 @@ class WeatherForecastPrimaryResult: Object, Mappable {
     @objc dynamic var status: String?
     @objc dynamic var alert: String?
     
-//    override static func primaryKey() -> String? {
-//        return ""
-//    }
+    //    override static func primaryKey() -> String? {
+    //        return ""
+    //    }
     
     required convenience init?(map: Map) {
         self.init()

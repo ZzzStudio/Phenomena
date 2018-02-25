@@ -25,8 +25,8 @@ class WindDescription: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        direction <- map["direction"]
-        speed <- map["speed"]
-        dateTime <- map["datetime"]
+        direction   <- map["direction"]
+        speed       <- map["speed"]
+        dateTime    <- map["datetime"]
     }
 }
