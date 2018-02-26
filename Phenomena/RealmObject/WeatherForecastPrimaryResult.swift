@@ -12,9 +12,9 @@ import ObjectMapper
 
 class WeatherForecastPrimaryResult: Object, Mappable {
     
-    @objc dynamic var hourly: String?
-    @objc dynamic var minutely: String?
-    @objc dynamic var daily: String?
+    @objc dynamic var hourly: WeatherForecastHourly?
+    @objc dynamic var minutely: WeatherForecastMinutely?
+    @objc dynamic var daily: WeatherForecastDaily?
     var primary: RealmOptional<Int>?
     @objc dynamic var status: String?
     @objc dynamic var alert: String?

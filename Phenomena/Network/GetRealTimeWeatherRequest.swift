@@ -12,12 +12,13 @@ import RealmSwift
 import AlamofireObjectMapper
 
 let apiKey = "H9XapP=AcedlI-nY"
-let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
+let realTimeURL = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
+let forecastURL = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/forecast.json"
 
 class GetRealTimeWeatherRequest {
     
     class func getRealTimeWeather(_ location: String, completionHandler: @escaping (_ result: Any?) -> Void) {
-        Alamofire.request(url).responseObject { (response: DataResponse<WeatherRealTime>) in
+        Alamofire.request(realTimeURL).responseObject { (response: DataResponse<WeatherRealTime>) in
             let realTimeWeather = response.result.value
             print(realTimeWeather!)
             
@@ -41,6 +42,14 @@ class GetRealTimeWeatherRequest {
 //            }
 //        }
 //
+    }
+    
+    class func getWeatherForecast(_ location: String, completionHandler: @escaping (_ result: Any?) -> Void) {
+        Alamofire.request(forecastURL).responseObject { (response: DataResponse<WeatherForecast>) in
+            let weatherForcast = response.result.value
+            print(weatherForcast!)
+            
+        }
     }
     
 //    func getRealTimeWeather(_ location: String, completionHandler: @escaping (_ result: Dictionary<String, Any>?) -> Void) {

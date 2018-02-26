@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         GetRealTimeWeatherRequest.getRealTimeWeather("location") { (result) in
             print(result!)
         }
-//        let apiKey = "H9XapP=AcedlI-nY"
+//        let apiKey     = "H9XapP=AcedlI-nY"
 //        let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
 //        Alamofire.request(url).responseJSON { response in
 //            print(response.request!)  // original URL request
@@ -39,6 +39,23 @@ class ViewController: UIViewController {
 //                print("JSON: \(JSON)")
 //            }
 //        }
+    }
+    @IBAction func onForecastButtonTapped(_ sender: Any) {
+        GetRealTimeWeatherRequest.getWeatherForecast("forecast") { (result) in
+            print(result!)
+        }
+        //        let apiKey = "H9XapP=AcedlI-nY"
+        //        let url = "https://api.caiyunapp.com/v2/\(apiKey)/121.6544,25.1552/realtime.json"
+        //        Alamofire.request(url).responseJSON { response in
+        //            print(response.request!)  // original URL request
+        //            print(response.response!) // URL response
+        //            print(response.data!)     // server data
+        //            print(response.result)   // result of response serialization
+        //
+        //            if let JSON = response.result.value {
+        //                print("JSON: \(JSON)")
+        //            }
+        //        }
     }
 }
 
