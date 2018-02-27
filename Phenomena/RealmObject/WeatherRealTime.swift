@@ -16,12 +16,12 @@ import ObjectMapper
 
 class WeatherRealTime: Object, Mappable {
     
-    @objc dynamic var status = ""
-    @objc dynamic var lang = ""
-    @objc dynamic var serverTime = 0
-    @objc dynamic var timeZoneShift = 0
+    @objc dynamic var status: String?
+    @objc dynamic var lang: String?
+    var serverTime: RealmOptional<Double>?
+    var timeZoneShift: RealmOptional<Double>?
     var location = List<DoubleObject>()
-    @objc dynamic var unit = ""
+    @objc dynamic var unit: String?
     @objc dynamic var result: WeatherRealTimePrimaryResult?
     
     override static func primaryKey() -> String? {
@@ -33,10 +33,12 @@ class WeatherRealTime: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        lang <- map["lang"]
-        serverTime <- map["server_time"]
-        timeZoneShift <- map["tzshift"]
+        status          <- map["status"]
+        lang            <- map["lang"]
+        serverTime      <- map["server_time"]
+        timeZoneShift   <- map["tzshift"]
+        unit            <- map["unit"]
+        result          <- map["result"]
         
         var location:[Double]? = nil
         location <- map["location"]
@@ -45,8 +47,5 @@ class WeatherRealTime: Object, Mappable {
             c.value = value
             self.location.append(c)
         }
-        
-        unit <- map["unit"]
-        result <- map["result"]
     }
 }
