@@ -10,14 +10,15 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherForecastPrimaryResult: Object, Mappable {
     
-    @objc dynamic var hourly: WeatherForecastHourly?
-    @objc dynamic var minutely: WeatherForecastMinutely?
-    @objc dynamic var daily: WeatherForecastDaily?
+    dynamic var hourly: WeatherForecastHourly?
+    dynamic var minutely: WeatherForecastMinutely?
+    dynamic var daily: WeatherForecastDaily?
     var primary: RealmOptional<Int>?
-    @objc dynamic var status: String?
-    @objc dynamic var alert: String?
+    dynamic var status: String?
+    dynamic var alert: String?
     
     //    override static func primaryKey() -> String? {
     //        return ""

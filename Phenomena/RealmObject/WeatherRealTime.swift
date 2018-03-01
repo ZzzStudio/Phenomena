@@ -10,19 +10,16 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-//class DoubleObject: Object {
-//    @objc dynamic var value: Double = 0.0
-//}
-
+@objcMembers
 class WeatherRealTime: Object, Mappable {
     
-    @objc dynamic var status: String?
-    @objc dynamic var lang: String?
+    dynamic var status: String?
+    dynamic var lang: String?
     var serverTime: RealmOptional<Double>?
     var timeZoneShift: RealmOptional<Double>?
     var location = List<DoubleObject>()
-    @objc dynamic var unit: String?
-    @objc dynamic var result: WeatherRealTimePrimaryResult?
+    dynamic var unit: String?
+    dynamic var result: WeatherRealTimePrimaryResult?
     
     override static func primaryKey() -> String? {
         return "status"

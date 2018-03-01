@@ -10,16 +10,17 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherForecast: Object, Mappable {
     
-    @objc dynamic var status: String?
-    @objc dynamic var lang: String?
-    @objc dynamic var result: WeatherForecastPrimaryResult?
+    dynamic var status: String?
+    dynamic var lang: String?
+    dynamic var result: WeatherForecastPrimaryResult?
     var serverTime: RealmOptional<Double>?
-    @objc dynamic var apiStatus: String?
+    dynamic var apiStatus: String?
     var timeZoneShift: RealmOptional<Int>?
-    @objc dynamic var apiVersion: String?
-    @objc dynamic var unit: String?
+    dynamic var apiVersion: String?
+    dynamic var unit: String?
     var location = List<DoubleObject>()
     
 //    override static func primaryKey() -> String? {

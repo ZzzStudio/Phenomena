@@ -10,16 +10,17 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherRealTimePrimaryResult: Object, Mappable {
     
-    @objc dynamic var status = ""
-    @objc dynamic var temperature = 0
-    @objc dynamic var skycon = 0
-    @objc dynamic var pm25 = 0
-    @objc dynamic var cloudRate = 0
-    @objc dynamic var humidity = 0
-    @objc dynamic var precipitation: PrecipitationDescription?
-    @objc dynamic var wind: WindDescription?
+    dynamic var status: String?
+    dynamic var temperature: RealmOptional<Double>?
+    dynamic var skycon:RealmOptional<Int>?
+    dynamic var pm25: RealmOptional<Double>?
+    dynamic var cloudRate: RealmOptional<Double>?
+    dynamic var humidity: RealmOptional<Double>?
+    dynamic var precipitation: PrecipitationDescription?
+    dynamic var wind: WindDescription?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -30,13 +31,13 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        temperature <- map["temperature"]
-        skycon <- map["skycon"]
-        pm25 <- map["pm25"]
-        cloudRate <- map["cloudrate"]
-        humidity <- map["humidity"]
-        precipitation <- map["precipitation"]
-        wind <- map["wind"]
+        status          <- map["status"]
+        temperature     <- map["temperature"]
+        skycon          <- map["skycon"]
+        pm25            <- map["pm25"]
+        cloudRate       <- map["cloudrate"]
+        humidity        <- map["humidity"]
+        precipitation   <- map["precipitation"]
+        wind            <- map["wind"]
     }
 }
