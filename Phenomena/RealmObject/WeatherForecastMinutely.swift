@@ -14,9 +14,18 @@ class WeatherForecastMinutely: Object, Mappable {
     
     @objc dynamic var status: String?
     @objc dynamic var descriptionMinutely: String?
+    
+    /// “gfs - Global Forecast System” “radar”
     @objc dynamic var dataSource: String?
+    
+    /// （大概是）概率
     var probability = List<DoubleObject>()
+    
+    /// （大概是）未来两小时
     var precipitation2h = List<DoubleObject>()
+    
+    /// 降水强度：未来一小时每分钟的降雨量
+    /// 0.03-0.25 是小雨，0.25-0.35 是中雨, 0.35 以上是大雨，根据不同地区情况可以有所调整
     var precipitation = List<DoubleObject>()
     
     //    override static func primaryKey() -> String? {

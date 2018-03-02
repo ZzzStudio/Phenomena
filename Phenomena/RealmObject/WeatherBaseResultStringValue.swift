@@ -12,8 +12,8 @@ import ObjectMapper
 
 class WeatherBaseResultStringValue: Object, Mappable {
     
-    @objc dynamic var dateTime = ""
-    @objc dynamic var value = ""
+    @objc dynamic var dateTime: String?
+    @objc dynamic var value: String?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -24,7 +24,7 @@ class WeatherBaseResultStringValue: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        dateTime <- map["datetime"]
-        value <- map["value"]
+        dateTime    <- map["datetime"]
+        value       <- map["value"]
     }
 }

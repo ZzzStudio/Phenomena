@@ -12,9 +12,9 @@ import ObjectMapper
 
 class WindDescription: Object, Mappable {
     
-    @objc dynamic var direction = 0
-    @objc dynamic var speed = 0
-    @objc dynamic var dateTime = ""
+    var direction: RealmOptional<Double>?
+    var speed: RealmOptional<Double>?
+    @objc dynamic var dateTime: String?
     
 //    override static func primaryKey() -> String? {
 //        return ""

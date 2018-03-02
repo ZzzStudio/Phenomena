@@ -12,10 +12,10 @@ import ObjectMapper
 
 class WeatherBaseResultIntervalValue: Object, Mappable {
     
-    @objc dynamic var date = ""
-    @objc dynamic var maximum = 0.0
-    @objc dynamic var average = 0.0
-    @objc dynamic var minimum = 0.0
+    @objc dynamic var date: String?
+    var maximum: RealmOptional<Double>?
+    var average: RealmOptional<Double>?
+    var minimum: RealmOptional<Double>?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -26,7 +26,7 @@ class WeatherBaseResultIntervalValue: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        date <- map["date"]
+        date    <- map["date"]
         maximum <- map["max"]
         average <- map["avg"]
         minimum <- map["min"]

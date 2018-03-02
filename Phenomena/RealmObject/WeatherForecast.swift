@@ -25,13 +25,13 @@ class WeatherForecast: Object, Mappable {
     /// 时间戳
     var serverTime: RealmOptional<Double>?
     
-    /// API 状态
+    /// API 状态（active）
     dynamic var apiStatus: String?
     
     /// 时区的偏移秒数，e.g. 东八区 28800 秒
     var timeZoneShift: RealmOptional<Int>?
     
-    /// API 版本
+    /// API 版本（v 2.2）
     dynamic var apiVersion: String?
     
     /// 支持米制（metric）、科学计量法（SI）
