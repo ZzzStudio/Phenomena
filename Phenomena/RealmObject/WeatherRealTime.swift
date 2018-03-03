@@ -13,17 +13,30 @@ import ObjectMapper
 @objcMembers
 class WeatherRealTime: Object, Mappable {
     
+    /// "ok"
     dynamic var status: String?
+    
+    /// 语言
     dynamic var lang: String?
+    
+    /// 服务器时间戳
     var serverTime: RealmOptional<Double>?
+    
+    /// 时区偏移秒数
     var timeZoneShift: RealmOptional<Double>?
+    
+    /// 经纬度
     var location = List<DoubleObject>()
+    
+    /// 米制（metric）和科学计量法（SI）
     dynamic var unit: String?
+    
+    /// 实时天气主体
     dynamic var result: WeatherRealTimePrimaryResult?
     
-    override static func primaryKey() -> String? {
-        return "status"
-    }
+//    override static func primaryKey() -> String? {
+//        return ""
+//    }
     
     required convenience init?(map: Map) {
         self.init()
