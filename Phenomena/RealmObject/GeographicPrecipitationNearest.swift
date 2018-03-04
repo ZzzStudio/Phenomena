@@ -10,11 +10,16 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class GeographicPrecipitationNearest: Object, Mappable {
     
-    @objc dynamic var status = ""
-    @objc dynamic var distance = 0
-    @objc dynamic var intensity = 0
+    dynamic var status: String?
+    
+    /// 距离
+    var distance: RealmOptional<Double>?
+    
+    /// 降水强度
+    var intensity: RealmOptional<Double>?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -25,8 +30,8 @@ class GeographicPrecipitationNearest: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        distance <- map["distance"]
-        intensity <- map["intensity"]
+        status      <- map["status"]
+        distance    <- map["distance"]
+        intensity   <- map["intensity"]
     }
 }

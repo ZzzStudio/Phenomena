@@ -10,10 +10,14 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class PrecipitationDescription: Object, Mappable {
     
-    @objc dynamic var nearest: GeographicPrecipitationNearest?
-    @objc dynamic var local: GeographicPrecipitationLocal?
+    /// 最近的降水带
+    dynamic var nearest: GeographicPrecipitationNearest?
+    
+    /// 本地的降水
+    dynamic var local: GeographicPrecipitationLocal?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -24,7 +28,7 @@ class PrecipitationDescription: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        nearest <- map["nearest"]
-        local <- map["local"]
+        nearest     <- map["nearest"]
+        local       <- map["local"]
     }
 }

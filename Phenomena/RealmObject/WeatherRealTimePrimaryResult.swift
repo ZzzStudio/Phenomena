@@ -13,13 +13,28 @@ import ObjectMapper
 @objcMembers
 class WeatherRealTimePrimaryResult: Object, Mappable {
     
+    /// "ok"
     dynamic var status: String?
+    
+    /// 温度
     dynamic var temperature: RealmOptional<Double>?
-    dynamic var skycon:RealmOptional<Int>?
+    
+    /// 天气概况
+    dynamic var skycon: String?
+    
+    /// PM 2.5
     dynamic var pm25: RealmOptional<Double>?
+    
+    /// 云量
     dynamic var cloudRate: RealmOptional<Double>?
+    
+    /// 相对湿度
     dynamic var humidity: RealmOptional<Double>?
+    
+    /// 降水
     dynamic var precipitation: PrecipitationDescription?
+    
+    /// 风
     dynamic var wind: WindDescription?
     
     //    override static func primaryKey() -> String? {

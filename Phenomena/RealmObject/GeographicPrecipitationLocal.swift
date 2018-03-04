@@ -10,11 +10,16 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class GeographicPrecipitationLocal: Object, Mappable {
     
-    @objc dynamic var status = ""
-    @objc dynamic var intensity = 0
-    @objc dynamic var dataSource = ""
+    dynamic var status: String?
+    
+    /// 降水强度
+    var intensity: RealmOptional<Double>?
+    
+    /// 数据源
+    dynamic var dataSource: String?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -25,8 +30,8 @@ class GeographicPrecipitationLocal: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        intensity <- map["intensity"]
-        dataSource <- map["datasource"]
+        status      <- map["status"]
+        intensity   <- map["intensity"]
+        dataSource  <- map["datasource"]
     }
 }
