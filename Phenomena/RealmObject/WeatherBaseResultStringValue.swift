@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherBaseResultStringValue: Object, Mappable {
     
     @objc dynamic var dateTime: String?

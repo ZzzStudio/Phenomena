@@ -29,6 +29,8 @@ class WeatherForecastHourly: Object, Mappable {
     
     /// 相对湿度
     var humidity = List<WeatherBaseResultDoubleValue>()
+    
+    /// （大概是）气压
     var pres = List<WeatherBaseResultDoubleValue>()
     
     /// PM 2.5

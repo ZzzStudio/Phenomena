@@ -12,8 +12,13 @@ import ObjectMapper
 
 class WindDescription: Object, Mappable {
     
+    /// 风向
     var direction: RealmOptional<Double>?
+    
+    /// 风速
     var speed: RealmOptional<Double>?
+    
+    /// 时间
     @objc dynamic var dateTime: String?
     
 //    override static func primaryKey() -> String? {

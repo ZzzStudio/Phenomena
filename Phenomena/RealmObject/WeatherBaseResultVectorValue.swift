@@ -10,11 +10,12 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherBaseResultVectorValue: Object, Mappable {
     
-    @objc dynamic var direction = 0.0
-    @objc dynamic var speed = 0.0
-    @objc dynamic var dateTime = ""
+    dynamic var direction: RealmOptional<Double>?
+    dynamic var speed: RealmOptional<Double>?
+    dynamic var dateTime: String?
     
 //    override static func primaryKey() -> String? {
 //        return ""
@@ -25,8 +26,8 @@ class WeatherBaseResultVectorValue: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        direction <- map["direction"]
-        speed <- map["speed"]
-        dateTime <- map["datetime"]
+        direction   <- map["direction"]
+        speed       <- map["speed"]
+        dateTime    <- map["datetime"]
     }
 }

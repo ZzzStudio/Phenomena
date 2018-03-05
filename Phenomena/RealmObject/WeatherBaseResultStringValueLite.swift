@@ -10,10 +10,11 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherBaseResultStringValueLite: Object, Mappable {
     
-    @objc dynamic var date = ""
-    @objc dynamic var value = ""
+    dynamic var date: String?
+    dynamic var value: String?
     
     //    override static func primaryKey() -> String? {
     //        return ""
@@ -24,7 +25,7 @@ class WeatherBaseResultStringValueLite: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        date <- map["date"]
-        value <- map["value"]
+        date    <- map["date"]
+        value   <- map["value"]
     }
 }

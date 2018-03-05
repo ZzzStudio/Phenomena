@@ -10,11 +10,12 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class SunDescription: Object, Mappable {
     
-    @objc dynamic var date: String?
-    @objc dynamic var sunset: AstronomyDescription?
-    @objc dynamic var sunrise: AstronomyDescription?
+    dynamic var date: String?
+    dynamic var sunset: AstronomyDescription?
+    dynamic var sunrise: AstronomyDescription?
     
     //    override static func primaryKey() -> String? {
     //        return ""

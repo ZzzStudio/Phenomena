@@ -10,14 +10,15 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
+@objcMembers
 class WeatherAlertMessage: Object, Mappable {
     
-    @objc dynamic var status: String?
-    @objc dynamic var code: String?
-    @objc dynamic var alertDescription: String?
-    @objc dynamic var releaseDate: String?
-    @objc dynamic var location: String?
-    @objc dynamic var boundCoordinates: String?
+    dynamic var status: String?
+    dynamic var code: String?
+    dynamic var alertDescription: String?
+    dynamic var releaseDate: String?
+    dynamic var location: String?
+    dynamic var boundCoordinates: String?
     
 //    override static func primaryKey() -> String? {
 //        return ""
@@ -28,11 +29,11 @@ class WeatherAlertMessage: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        code <- map["code"]
-        alertDescription <- map["description"]
-        releaseDate <- map["pubdate"]
-        location <- map["location"]
-        boundCoordinates <- map["bound_coord"]
+        status              <- map["status"]
+        code                <- map["code"]
+        alertDescription    <- map["description"]
+        releaseDate         <- map["pubdate"]
+        location            <- map["location"]
+        boundCoordinates    <- map["bound_coord"]
     }
 }
