@@ -13,6 +13,8 @@
 		1206EDE720431C6400554A8A /* WeatherBaseResultIndexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE620431C6400554A8A /* WeatherBaseResultIndexValue.swift */; };
 		1206EDE92043202100554A8A /* AstronomyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDE82043202100554A8A /* AstronomyDescription.swift */; };
 		1206EDEB204320A400554A8A /* SunDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1206EDEA204320A400554A8A /* SunDescription.swift */; };
+		122733EB20582675003A84FF /* WeatherForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122733E920582675003A84FF /* WeatherForecastTableViewCell.swift */; };
+		122733EC20582675003A84FF /* WeatherForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122733EA20582675003A84FF /* WeatherForecastTableViewCell.xib */; };
 		1227ECF22024BCD700BD0C0C /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ECF12024BCD700BD0C0C /* WeatherForecast.swift */; };
 		1227ECFD2028957700BD0C0C /* WeatherRealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ECFC2028957700BD0C0C /* WeatherRealTime.swift */; };
 		1227ECFF2028970000BD0C0C /* WindDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ECFE2028970000BD0C0C /* WindDescription.swift */; };
@@ -69,6 +71,8 @@
 		1206EDE620431C6400554A8A /* WeatherBaseResultIndexValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultIndexValue.swift; sourceTree = "<group>"; };
 		1206EDE82043202100554A8A /* AstronomyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDescription.swift; sourceTree = "<group>"; };
 		1206EDEA204320A400554A8A /* SunDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunDescription.swift; sourceTree = "<group>"; };
+		122733E920582675003A84FF /* WeatherForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastTableViewCell.swift; sourceTree = "<group>"; };
+		122733EA20582675003A84FF /* WeatherForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherForecastTableViewCell.xib; sourceTree = "<group>"; };
 		1227ECF12024BCD700BD0C0C /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		1227ECFC2028957700BD0C0C /* WeatherRealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRealTime.swift; sourceTree = "<group>"; };
 		1227ECFE2028970000BD0C0C /* WindDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindDescription.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		128C42A72018F2AD007471FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				122733E920582675003A84FF /* WeatherForecastTableViewCell.swift */,
+				122733EA20582675003A84FF /* WeatherForecastTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 			files = (
 				129374CF200FA1940012B857 /* LaunchScreen.storyboard in Resources */,
 				129374CC200FA1940012B857 /* Assets.xcassets in Resources */,
+				122733EC20582675003A84FF /* WeatherForecastTableViewCell.xib in Resources */,
 				129374CA200FA1940012B857 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +607,7 @@
 				126F2477202B48CC003CF9BB /* WeatherAlertMessage.swift in Sources */,
 				1206EDE32040681400554A8A /* WeatherForecastMinutely.swift in Sources */,
 				1274AB43202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift in Sources */,
+				122733EB20582675003A84FF /* WeatherForecastTableViewCell.swift in Sources */,
 				12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */,
 				12439B4E202A151800383839 /* WeatherBaseResultStringValueLite.swift in Sources */,
 				1227ED03202898E300BD0C0C /* GeographicPrecipitationLocal.swift in Sources */,
