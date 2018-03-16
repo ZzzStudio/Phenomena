@@ -42,6 +42,7 @@
 		129374CF200FA1940012B857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129374CD200FA1940012B857 /* LaunchScreen.storyboard */; };
 		129374DA200FA1940012B857 /* PhenomenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374D9200FA1940012B857 /* PhenomenaTests.swift */; };
 		129374E5200FA1940012B857 /* PhenomenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374E4200FA1940012B857 /* PhenomenaUITests.swift */; };
+		12CC76E1205C2D9300497845 /* RealTimePhenomenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */; };
 		12DB08F5202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */; };
 		12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */; };
 		599936647C03A9F8624F1CD2 /* Pods_Phenomena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9731FFD5D29EB2A9A35AC9 /* Pods_Phenomena.framework */; };
@@ -108,6 +109,7 @@
 		129374E0200FA1940012B857 /* PhenomenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhenomenaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		129374E4200FA1940012B857 /* PhenomenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenaUITests.swift; sourceTree = "<group>"; };
 		129374E6200FA1940012B857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePhenomenaViewController.swift; sourceTree = "<group>"; };
 		12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultDoubleValue.swift; sourceTree = "<group>"; };
 		12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultStringValue.swift; sourceTree = "<group>"; };
 		1C38F881F5A27A0E524C860A /* Pods-PhenomenaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhenomenaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhenomenaTests/Pods-PhenomenaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				128C42A92018F317007471FA /* WeatherDisplayViewController.swift */,
 				128F87FD204F045C00F85501 /* WeatherRealTimeViewController.swift */,
 				128F87FF204F047800F85501 /* WeatherForecastViewController.swift */,
+				12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 		129374C3200FA1940012B857 /* Phenomena */ = {
 			isa = PBXGroup;
 			children = (
+				12CC76E2205C32A300497845 /* Utility */,
 				128C42A82018F2AD007471FA /* Controller */,
 				128C42A62018F2AD007471FA /* Network */,
 				128C42A72018F2AD007471FA /* View */,
@@ -262,6 +266,13 @@
 				129374E6200FA1940012B857 /* Info.plist */,
 			);
 			path = PhenomenaUITests;
+			sourceTree = "<group>";
+		};
+		12CC76E2205C32A300497845 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		AFAA4948DA4D1738A14FC1BC /* Frameworks */ = {
@@ -616,6 +627,7 @@
 				1206EDE32040681400554A8A /* WeatherForecastMinutely.swift in Sources */,
 				1274AB43202F56C100E8A0E3 /* WeatherForecastPrimaryResult.swift in Sources */,
 				122733EB20582675003A84FF /* WeatherForecastTableViewCell.swift in Sources */,
+				12CC76E1205C2D9300497845 /* RealTimePhenomenaViewController.swift in Sources */,
 				12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */,
 				12439B4E202A151800383839 /* WeatherBaseResultStringValueLite.swift in Sources */,
 				1227ED03202898E300BD0C0C /* GeographicPrecipitationLocal.swift in Sources */,
@@ -789,6 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6M3X5J4BE6;
 				INFOPLIST_FILE = Phenomena/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = studio.zzz.Phenomena;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -805,6 +818,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6M3X5J4BE6;
 				INFOPLIST_FILE = Phenomena/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = studio.zzz.Phenomena;
 				PRODUCT_NAME = "$(TARGET_NAME)";
