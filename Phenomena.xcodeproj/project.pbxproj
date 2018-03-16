@@ -43,6 +43,7 @@
 		129374DA200FA1940012B857 /* PhenomenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374D9200FA1940012B857 /* PhenomenaTests.swift */; };
 		129374E5200FA1940012B857 /* PhenomenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374E4200FA1940012B857 /* PhenomenaUITests.swift */; };
 		12CC76E1205C2D9300497845 /* RealTimePhenomenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */; };
+		12CC76E4205C34BD00497845 /* GeographicInfomationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC76E3205C34BD00497845 /* GeographicInfomationManager.swift */; };
 		12DB08F5202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */; };
 		12DB08F7202A06EA00B88C47 /* WeatherBaseResultStringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */; };
 		599936647C03A9F8624F1CD2 /* Pods_Phenomena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9731FFD5D29EB2A9A35AC9 /* Pods_Phenomena.framework */; };
@@ -110,6 +111,7 @@
 		129374E4200FA1940012B857 /* PhenomenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenaUITests.swift; sourceTree = "<group>"; };
 		129374E6200FA1940012B857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePhenomenaViewController.swift; sourceTree = "<group>"; };
+		12CC76E3205C34BD00497845 /* GeographicInfomationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicInfomationManager.swift; sourceTree = "<group>"; };
 		12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultDoubleValue.swift; sourceTree = "<group>"; };
 		12DB08F6202A06EA00B88C47 /* WeatherBaseResultStringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultStringValue.swift; sourceTree = "<group>"; };
 		1C38F881F5A27A0E524C860A /* Pods-PhenomenaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhenomenaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhenomenaTests/Pods-PhenomenaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		12CC76E2205C32A300497845 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				12CC76E3205C34BD00497845 /* GeographicInfomationManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				1206EDEB204320A400554A8A /* SunDescription.swift in Sources */,
 				1227ED052028992900BD0C0C /* PrecipitationDescription.swift in Sources */,
 				1206EDE720431C6400554A8A /* WeatherBaseResultIndexValue.swift in Sources */,
+				12CC76E4205C34BD00497845 /* GeographicInfomationManager.swift in Sources */,
 				1206EDE12040677800554A8A /* WeatherForecastHourly.swift in Sources */,
 				1227ECFF2028970000BD0C0C /* WindDescription.swift in Sources */,
 				122733EF205987AF003A84FF /* LatestWeatherCollectionViewCell.swift in Sources */,

@@ -23,6 +23,9 @@ class RealTimePhenomenaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _ = GeographicInfomationManager.sharedManager
+        
     }
 
 }
