@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class GeographicInfomationManager: NSObject, CLLocationManagerDelegate {
+class GeographicInfomationManager: NSObject {
     
     static let sharedManager: GeographicInfomationManager = {
         let manager = GeographicInfomationManager()
@@ -29,6 +29,14 @@ class GeographicInfomationManager: NSObject, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     var locationCoordinate: [String: Double] = [:]
+}
+
+// MARK: - CLLocationManagerDelegate
+extension GeographicInfomationManager: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error: " + error.localizedDescription)
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation = locations.last!
@@ -36,8 +44,6 @@ class GeographicInfomationManager: NSObject, CLLocationManagerDelegate {
         locationCoordinate["latitude"] = currentLocation.coordinate.latitude
         print("经度：\(currentLocation.coordinate.longitude)")
         print("纬度：\(currentLocation.coordinate.latitude)")
-        
-        manager.stopUpdatingLocation()
         
         CLGeocoder().reverseGeocodeLocation(manager.location!) { (placemarks, error) in
             if error != nil {
@@ -53,15 +59,12 @@ class GeographicInfomationManager: NSObject, CLLocationManagerDelegate {
     func displayLocationInfo(placemark: CLPlacemark) {
         
         self.locationManager.stopUpdatingLocation()
+        
         print(placemark.locality ?? "")
         print(placemark.postalCode ?? "")
         print(placemark.administrativeArea ?? "")
         print(placemark.country ?? "")
     }
-    
-//    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
-//    {
-//        print("Error: " + error.localizedDescription)
-//    }
-    
 }
+
+
