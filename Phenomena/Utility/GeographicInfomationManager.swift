@@ -9,26 +9,50 @@
 import Foundation
 import CoreLocation
 
+protocol GeographicInfomationManagerDelegate {
+    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation: CLLocation)
+    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark: CLPlacemark)
+}
+
+extension GeographicInfomationManagerDelegate {
+//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark: CLPlacemark)
+}
+
 class GeographicInfomationManager: NSObject {
     
-    static let sharedManager: GeographicInfomationManager = {
-        let manager = GeographicInfomationManager()
+    static let sharedManager = GeographicInfomationManager()
+    var delegate: GeographicInfomationManagerDelegate?
+    var locationCoordinate: [String: Double] = [:]
+    
+    fileprivate let locationManager = CLLocationManager()
+
+    override init() {
+        super.init()
         
-        manager.locationManager.delegate = manager
-        manager.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.locationManager.distanceFilter = 100
-        manager.locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
-            manager.locationManager.startUpdatingLocation()
+            locationManager.startUpdatingLocation()
             print("定位开始")
         }
-        
-        return manager
-    }()
+    }
     
-    let locationManager = CLLocationManager()
-    
-    var locationCoordinate: [String: Double] = [:]
+//    static let sharedManager: GeographicInfomationManager = {
+//        let manager = GeographicInfomationManager()
+//
+//        manager.locationManager.delegate = manager
+//        manager.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//        manager.locationManager.distanceFilter = 100
+//        manager.locationManager.requestAlwaysAuthorization()
+//        if CLLocationManager.locationServicesEnabled() {
+//            manager.locationManager.startUpdatingLocation()
+//            print("定位开始")
+//        }
+//
+//        return manager
+//    }()
+
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -52,6 +76,7 @@ extension GeographicInfomationManager: CLLocationManagerDelegate {
             }
             guard placemarks!.count > 0 else { return }
             let placemark = placemarks![0]
+            self.delegate?.geographicInfomationManager(self, didUpdatePlacemark: placemark)
             self.displayLocationInfo(placemark: placemark)
         }
     }
