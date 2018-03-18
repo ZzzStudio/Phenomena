@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class RealTimePhenomenaViewController: UIViewController {
     
@@ -21,11 +22,19 @@ class RealTimePhenomenaViewController: UIViewController {
     @IBOutlet weak var windDirectionLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
     
+//    let geographicManager = GeographicInfomationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = GeographicInfomationManager.sharedManager
+        GeographicInfomationManager.sharedManager.delegate = self;
         
     }
 
+}
+
+extension RealTimePhenomenaViewController: GeographicInfomationManagerDelegate {
+    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark) {
+        self.regionLabel.text = placemark.locality ?? "unknown"
+    }
 }

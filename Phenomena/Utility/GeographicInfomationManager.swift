@@ -10,12 +10,14 @@ import Foundation
 import CoreLocation
 
 protocol GeographicInfomationManagerDelegate {
-    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation: CLLocation)
-    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark: CLPlacemark)
+//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation: CLLocation)
+    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark)
+    
 }
 
 extension GeographicInfomationManagerDelegate {
-//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark: CLPlacemark)
+    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation location: CLLocation) {}
+//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark) {}
 }
 
 class GeographicInfomationManager: NSObject {
@@ -76,8 +78,8 @@ extension GeographicInfomationManager: CLLocationManagerDelegate {
             }
             guard placemarks!.count > 0 else { return }
             let placemark = placemarks![0]
-            self.delegate?.geographicInfomationManager(self, didUpdatePlacemark: placemark)
             self.displayLocationInfo(placemark: placemark)
+            self.delegate?.geographicInfomationManager(self, didUpdatePlacemark: placemark);
         }
     }
     
