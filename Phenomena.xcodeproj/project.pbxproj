@@ -43,6 +43,7 @@
 		129374DA200FA1940012B857 /* PhenomenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374D9200FA1940012B857 /* PhenomenaTests.swift */; };
 		129374E5200FA1940012B857 /* PhenomenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129374E4200FA1940012B857 /* PhenomenaUITests.swift */; };
 		129CE7FF205EC1350056B447 /* WeatherDataInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129CE7FE205EC1350056B447 /* WeatherDataInterface.swift */; };
+		129CE802205ECD7A0056B447 /* Double+Phenomena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129CE801205ECD7A0056B447 /* Double+Phenomena.swift */; };
 		12CC76E1205C2D9300497845 /* RealTimePhenomenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */; };
 		12CC76E4205C34BD00497845 /* GeographicInfomationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC76E3205C34BD00497845 /* GeographicInfomationManager.swift */; };
 		12DB08F5202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */; };
@@ -112,6 +113,7 @@
 		129374E4200FA1940012B857 /* PhenomenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenaUITests.swift; sourceTree = "<group>"; };
 		129374E6200FA1940012B857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129CE7FE205EC1350056B447 /* WeatherDataInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataInterface.swift; sourceTree = "<group>"; };
+		129CE801205ECD7A0056B447 /* Double+Phenomena.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Phenomena.swift"; sourceTree = "<group>"; };
 		12CC76E0205C2D9300497845 /* RealTimePhenomenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePhenomenaViewController.swift; sourceTree = "<group>"; };
 		12CC76E3205C34BD00497845 /* GeographicInfomationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicInfomationManager.swift; sourceTree = "<group>"; };
 		12DB08F4202A06D300B88C47 /* WeatherBaseResultDoubleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultDoubleValue.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		129374C3200FA1940012B857 /* Phenomena */ = {
 			isa = PBXGroup;
 			children = (
+				129CE800205ECD1A0056B447 /* Extension */,
 				12CC76E2205C32A300497845 /* Utility */,
 				128C42A82018F2AD007471FA /* Controller */,
 				128C42A62018F2AD007471FA /* Network */,
@@ -271,6 +274,14 @@
 				129374E6200FA1940012B857 /* Info.plist */,
 			);
 			path = PhenomenaUITests;
+			sourceTree = "<group>";
+		};
+		129CE800205ECD1A0056B447 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				129CE801205ECD7A0056B447 /* Double+Phenomena.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		12CC76E2205C32A300497845 /* Utility */ = {
@@ -621,6 +632,7 @@
 				129CE7FF205EC1350056B447 /* WeatherDataInterface.swift in Sources */,
 				1206EDE720431C6400554A8A /* WeatherBaseResultIndexValue.swift in Sources */,
 				12CC76E4205C34BD00497845 /* GeographicInfomationManager.swift in Sources */,
+				129CE802205ECD7A0056B447 /* Double+Phenomena.swift in Sources */,
 				1206EDE12040677800554A8A /* WeatherForecastHourly.swift in Sources */,
 				1227ECFF2028970000BD0C0C /* WindDescription.swift in Sources */,
 				122733EF205987AF003A84FF /* LatestWeatherCollectionViewCell.swift in Sources */,

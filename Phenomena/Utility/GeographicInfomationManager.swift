@@ -20,11 +20,22 @@ extension GeographicInfomationManagerDelegate {
 //    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark) {}
 }
 
+struct Coordinate {
+    public var latitude: Double
+    
+    public var longitude: Double
+    
+    public init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
 class GeographicInfomationManager: NSObject {
     
     static let sharedManager = GeographicInfomationManager()
     var delegate: GeographicInfomationManagerDelegate?
-    var locationCoordinate: [String: Double] = [:]
+    var locationCoordinate: Coordinate?
     
     fileprivate let locationManager = CLLocationManager()
 
@@ -66,8 +77,8 @@ extension GeographicInfomationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation = locations.last!
-        locationCoordinate["longitude"] = currentLocation.coordinate.longitude
-        locationCoordinate["latitude"] = currentLocation.coordinate.latitude
+//        self.coordinate = coordinate
+        locationCoordinate = Coordinate.init(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
         print("经度：\(currentLocation.coordinate.longitude)")
         print("纬度：\(currentLocation.coordinate.latitude)")
         

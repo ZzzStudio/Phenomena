@@ -33,8 +33,14 @@ class RealTimePhenomenaViewController: UIViewController {
 
 }
 
+// MARK: - GeographicInfomationManagerDelegate
 extension RealTimePhenomenaViewController: GeographicInfomationManagerDelegate {
+    
     func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark) {
-        self.regionLabel.text = placemark.locality ?? "unknown"
+        regionLabel.text = placemark.locality ?? "unknown"
+        
+        WeatherDataInterface.requestRealTime { (result) in
+        }
     }
 }
+
