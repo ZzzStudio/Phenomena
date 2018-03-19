@@ -40,6 +40,7 @@ extension RealTimePhenomenaViewController: GeographicInfomationManagerDelegate {
         regionLabel.text = placemark.locality ?? "unknown"
         
         WeatherDataInterface.requestRealTime { (result) in
+            
         }
     }
 }
