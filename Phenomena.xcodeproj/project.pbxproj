@@ -24,6 +24,7 @@
 		1227ED03202898E300BD0C0C /* GeographicPrecipitationLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ED02202898E300BD0C0C /* GeographicPrecipitationLocal.swift */; };
 		1227ED052028992900BD0C0C /* PrecipitationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ED042028992900BD0C0C /* PrecipitationDescription.swift */; };
 		1227ED0920289C5200BD0C0C /* WeatherRealTimePrimaryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227ED0820289C5200BD0C0C /* WeatherRealTimePrimaryResult.swift */; };
+		122B0AA420641E34002D5692 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122B0AA320641E34002D5692 /* Log.swift */; };
 		12439B4A202A110100383839 /* WeatherBaseResultIntervalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12439B49202A110100383839 /* WeatherBaseResultIntervalValue.swift */; };
 		12439B4C202A12BC00383839 /* WeatherBaseResultVectorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12439B4B202A12BC00383839 /* WeatherBaseResultVectorValue.swift */; };
 		12439B4E202A151800383839 /* WeatherBaseResultStringValueLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12439B4D202A151800383839 /* WeatherBaseResultStringValueLite.swift */; };
@@ -88,6 +89,7 @@
 		1227ED02202898E300BD0C0C /* GeographicPrecipitationLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicPrecipitationLocal.swift; sourceTree = "<group>"; };
 		1227ED042028992900BD0C0C /* PrecipitationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecipitationDescription.swift; sourceTree = "<group>"; };
 		1227ED0820289C5200BD0C0C /* WeatherRealTimePrimaryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRealTimePrimaryResult.swift; sourceTree = "<group>"; };
+		122B0AA320641E34002D5692 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		12439B49202A110100383839 /* WeatherBaseResultIntervalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultIntervalValue.swift; sourceTree = "<group>"; };
 		12439B4B202A12BC00383839 /* WeatherBaseResultVectorValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultVectorValue.swift; sourceTree = "<group>"; };
 		12439B4D202A151800383839 /* WeatherBaseResultStringValueLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseResultStringValueLite.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				12CC76E3205C34BD00497845 /* GeographicInfomationManager.swift */,
+				122B0AA320641E34002D5692 /* Log.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				1227ECFD2028957700BD0C0C /* WeatherRealTime.swift in Sources */,
 				129374C5200FA1940012B857 /* AppDelegate.swift in Sources */,
 				128C42AC2024B871007471FA /* GetRealTimeWeatherRequest.swift in Sources */,
+				122B0AA420641E34002D5692 /* Log.swift in Sources */,
 				128C42AE2024B8A8007471FA /* GetWeatherForecastRequest.swift in Sources */,
 				128C42AA2018F317007471FA /* WeatherDisplayViewController.swift in Sources */,
 				128F8800204F047800F85501 /* WeatherForecastViewController.swift in Sources */,
