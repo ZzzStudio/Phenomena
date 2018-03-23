@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+public let log = Log.self
+
+public struct Log {
+    
+}
