@@ -99,6 +99,7 @@
                     <tabBarItem key="tabBarItem" title="Forecast" id="270-kW-8WV"/>
                     <connections>
                         <outlet property="collectionView" destination="ktq-7l-lfK" id="ivD-y1-wza"/>
+                        <outlet property="flowLayout" destination="Qrb-Qq-wyd" id="e09-tQ-9bF"/>
                         <outlet property="tableView" destination="cfM-d4-gVG" id="Dee-Bv-IMl"/>
                     </connections>
                 </viewController>

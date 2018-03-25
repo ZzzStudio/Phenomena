@@ -28,7 +28,6 @@ class RealTimePhenomenaViewController: UIViewController {
         super.viewDidLoad()
         
         GeographicInfomationManager.sharedManager.delegate = self;
-        
     }
 
 }
