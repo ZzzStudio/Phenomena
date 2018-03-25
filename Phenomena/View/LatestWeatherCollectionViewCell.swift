@@ -10,9 +10,12 @@ import UIKit
 
 class LatestWeatherCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var tempetatureLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

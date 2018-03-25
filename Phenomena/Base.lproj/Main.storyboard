@@ -52,35 +52,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zth-mJ-Bbf">
-                                <rect key="frame" x="292" y="20" width="60" height="30"/>
+                                <rect key="frame" x="287" y="10" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forecast"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIo-T2-MJE">
-                                <rect key="frame" x="166" y="60" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soU-74-mvn">
-                                <rect key="frame" x="166" y="95" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8R-52-geq">
-                                <rect key="frame" x="216" y="44" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ktq-7l-lfK">
-                                <rect key="frame" x="0.0" y="124" width="375" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ktq-7l-lfK">
+                                <rect key="frame" x="0.0" y="57" width="375" height="141"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="P2V-W6-XZQ"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qrb-Qq-wyd">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -98,16 +79,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cfM-d4-gVG">
-                                <rect key="frame" x="0.0" y="218" width="375" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cfM-d4-gVG">
+                                <rect key="frame" x="0.0" y="206" width="375" height="412"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bQd-JO-8Ly" firstAttribute="trailing" secondItem="ktq-7l-lfK" secondAttribute="trailing" id="33G-Gv-1lz"/>
+                            <constraint firstItem="ktq-7l-lfK" firstAttribute="leading" secondItem="bQd-JO-8Ly" secondAttribute="leading" id="F89-y5-Ptl"/>
+                            <constraint firstItem="bQd-JO-8Ly" firstAttribute="trailing" secondItem="cfM-d4-gVG" secondAttribute="trailing" id="HVm-3y-uEX"/>
+                            <constraint firstItem="ktq-7l-lfK" firstAttribute="top" secondItem="bQd-JO-8Ly" secondAttribute="top" constant="37" id="IG2-Kz-lMn"/>
+                            <constraint firstItem="bQd-JO-8Ly" firstAttribute="bottom" secondItem="cfM-d4-gVG" secondAttribute="bottom" id="QnR-yc-u7Z"/>
+                            <constraint firstItem="cfM-d4-gVG" firstAttribute="leading" secondItem="bQd-JO-8Ly" secondAttribute="leading" id="S5L-U4-u0V"/>
+                            <constraint firstItem="cfM-d4-gVG" firstAttribute="top" secondItem="ktq-7l-lfK" secondAttribute="bottom" constant="8" id="uRJ-lv-veL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bQd-JO-8Ly"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Forecast" id="270-kW-8WV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ktq-7l-lfK" id="ivD-y1-wza"/>
+                        <outlet property="tableView" destination="cfM-d4-gVG" id="Dee-Bv-IMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ys5-5W-oH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
