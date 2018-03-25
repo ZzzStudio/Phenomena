@@ -13,17 +13,13 @@ import ObjectMapper
 class WindDescription: Object, Mappable {
     
     /// 风向
-    var direction: RealmOptional<Double>?
+    var direction: Double = 0
     
     /// 风速
-    var speed: RealmOptional<Double>?
+    var speed: Double = 0
     
     /// 时间
     @objc dynamic var dateTime: String?
-    
-//    override static func primaryKey() -> String? {
-//        return ""
-//    }
     
     required convenience init?(map: Map) {
         self.init()

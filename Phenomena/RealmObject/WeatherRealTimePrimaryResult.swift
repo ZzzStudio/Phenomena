@@ -17,29 +17,27 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
     dynamic var status: String?
     
     /// 温度
-    dynamic var temperature: RealmOptional<Double>?
+    // I cannot find a way transforming result into Optional Object
+//    dynamic var temperature: Double?
+    dynamic var temperature: Double = 0
     
     /// 天气概况
     dynamic var skycon: String?
     
     /// PM 2.5
-    dynamic var pm25: RealmOptional<Double>?
+    dynamic var pm25: Double = 0
     
     /// 云量
-    dynamic var cloudRate: RealmOptional<Double>?
+    dynamic var cloudRate: Double = 0
     
     /// 相对湿度
-    dynamic var humidity: RealmOptional<Double>?
+    dynamic var humidity: Double = 0
     
     /// 降水
     dynamic var precipitation: PrecipitationDescription?
     
     /// 风
     dynamic var wind: WindDescription?
-    
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
     
     required convenience init?(map: Map) {
         self.init()

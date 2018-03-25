@@ -264,7 +264,7 @@
                     <tabBarItem key="tabBarItem" title="Real Time" id="tLK-7u-AcB"/>
                     <connections>
                         <outlet property="cloudinessLabel" destination="sUk-fN-zaf" id="rV7-zJ-1QH"/>
-                        <outlet property="descriptionLabel" destination="pM2-Cy-Fj8" id="qbY-2L-6Mu"/>
+                        <outlet property="descriptionLabel" destination="1ro-75-isG" id="Ji4-xC-NoM"/>
                         <outlet property="humidityLabel" destination="mBb-LJ-YgC" id="VmU-Qr-3Gt"/>
                         <outlet property="pm25Label" destination="Gb0-CI-zSn" id="zbx-3T-k6g"/>
                         <outlet property="precipitationLabel" destination="o9U-MH-ZTG" id="tSI-AR-iw6"/>

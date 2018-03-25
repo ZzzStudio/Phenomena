@@ -19,10 +19,6 @@ class PrecipitationDescription: Object, Mappable {
     /// 本地的降水
     dynamic var local: GeographicPrecipitationLocal?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

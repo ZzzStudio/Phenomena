@@ -10,19 +10,17 @@ import Foundation
 import CoreLocation
 
 protocol GeographicInfomationManagerDelegate {
-//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation: CLLocation)
     func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark)
-    
 }
 
 extension GeographicInfomationManagerDelegate {
-    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation location: CLLocation) {}
-//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark) {}
+//    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdatePlacemark placemark: CLPlacemark) { }
+    func geographicInfomationManager(_ manager: GeographicInfomationManager, didUpdateLocation location: CLLocation) { }
 }
 
-struct Coordinate {
+public struct Coordinate {
+
     public var latitude: Double
-    
     public var longitude: Double
     
     public init(latitude: Double, longitude: Double) {

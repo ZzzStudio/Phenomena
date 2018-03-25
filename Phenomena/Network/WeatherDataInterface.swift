@@ -31,12 +31,12 @@ class WeatherDataInterface {
         return "https://api.caiyunapp.com/v2/\(apiKey)/\(coordinate)/forecast.json"
     }
     
-    class func requestRealTime(_ completionHandler: @escaping (_ result: DataResponse<WeatherRealTime>?) -> Void) {
+    class func requestRealTime(_ completionHandler: @escaping (_ result: WeatherRealTime?) -> Void) {
         guard let url = realTimeInterface else { return }
         Alamofire.request(url).responseObject { (response: DataResponse<WeatherRealTime>) in
             let realTimeWeather = response.result.value
             print(realTimeWeather!)
-            completionHandler(response)            
+            completionHandler(realTimeWeather)
         }
     }
 }

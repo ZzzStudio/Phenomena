@@ -1,27 +1,40 @@
 PODS:
-  - Alamofire (4.6.0)
+  - Alamofire (4.7.0)
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - ObjectMapper (3.1.0)
-  - Realm (2.10.1):
-    - Realm/Headers (= 2.10.1)
-  - Realm/Headers (2.10.1)
-  - RealmSwift (2.10.1):
-    - Realm (= 2.10.1)
+  - ObjectMapper+Realm (0.5):
+    - ObjectMapper
+    - RealmSwift
+  - ObjectMapperAdditions/Core (4.0.1):
+    - ObjectMapper
+  - ObjectMapperAdditions/Realm (4.0.1):
+    - ObjectMapper
+    - ObjectMapperAdditions/Core
+    - RealmSwift
+  - Realm (3.3.0):
+    - Realm/Headers (= 3.3.0)
+  - Realm/Headers (3.3.0)
+  - RealmSwift (3.3.0):
+    - Realm (= 3.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireObjectMapper (~> 5.0)
+  - ObjectMapper+Realm
+  - ObjectMapperAdditions/Realm
   - RealmSwift
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  Realm: fc7a317a5c2c9ba91f5f235ede4e2ea76e9eba0c
-  RealmSwift: 505ed6c15942a2e76f5cfa78a8667cfa997ee75b
+  ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
+  ObjectMapperAdditions: 196a600816dd7c6696d3bc09183a961c3c09067a
+  Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
+  RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
 
-PODFILE CHECKSUM: 017af1fd002988ef6494a71f69ad158f7540e04c
+PODFILE CHECKSUM: e6a767fb10b15e6307fd1d61b8b9865823a42f6f
 
 COCOAPODS: 1.4.0

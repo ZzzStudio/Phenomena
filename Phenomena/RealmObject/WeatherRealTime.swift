@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 import ObjectMapper
+import ObjectMapperAdditions
+import ObjectMapper_Realm
 
 @objcMembers
 class WeatherRealTime: Object, Mappable {
@@ -20,14 +22,14 @@ class WeatherRealTime: Object, Mappable {
     dynamic var lang: String?
     
     /// 服务器时间戳
-    var serverTime: RealmOptional<Double>?
+    var serverTime: Double = 0
     
     /// 时区偏移秒数
-    var timeZoneShift: RealmOptional<Double>?
+    var timeZoneShift: Double = 0
     
     /// 经纬度
-    var location = List<DoubleObject>()
-    
+    var location: List<Double> = List<Double>()
+
     /// 米制（metric）和科学计量法（SI）
     dynamic var unit: String?
     
@@ -47,15 +49,9 @@ class WeatherRealTime: Object, Mappable {
         lang            <- map["lang"]
         serverTime      <- map["server_time"]
         timeZoneShift   <- map["tzshift"]
+        location        <- (map["location"], RealmTypeCastTransform())
         unit            <- map["unit"]
         result          <- map["result"]
-        
-        var location:[Double]? = nil
-        location <- map["location"]
-        location?.forEach { value in
-            let c = DoubleObject()
-            c.value = value
-            self.location.append(c)
-        }
+
     }
 }

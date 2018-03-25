@@ -40,7 +40,21 @@ extension RealTimePhenomenaViewController: GeographicInfomationManagerDelegate {
         regionLabel.text = placemark.locality ?? "unknown"
         
         WeatherDataInterface.requestRealTime { (result) in
-            
+            guard let realTime = result else { return }
+            print("---request finished---")
+
+//            if let temperature = realTime.result?.temperature {
+//                self.temperatureLabel.text = "\(temperature)"
+//            }
+            self.temperatureLabel.text = "\(realTime.result?.temperature ?? 0)"
+            self.descriptionLabel.text = realTime.result?.skycon ?? "n/a"
+
+
+            self.pm25Label.text = "\(realTime.result?.pm25 ?? 0)"
+            self.cloudinessLabel.text = "\(realTime.result?.cloudRate ?? 0)"
+            self.humidityLabel.text = "\(realTime.result?.humidity ?? 0)"
+            self.windDirectionLabel.text = "\(realTime.result?.wind?.direction ?? 0)"
+            self.windSpeedLabel.text = "\(realTime.result?.wind?.speed ?? 0)"
         }
     }
 }

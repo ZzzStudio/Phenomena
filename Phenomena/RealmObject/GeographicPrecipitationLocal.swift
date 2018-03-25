@@ -16,14 +16,10 @@ class GeographicPrecipitationLocal: Object, Mappable {
     dynamic var status: String?
     
     /// 降水强度
-    var intensity: RealmOptional<Double>?
+    var intensity: Double = 0
     
     /// 数据源
     dynamic var dataSource: String?
-    
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
     
     required convenience init?(map: Map) {
         self.init()
