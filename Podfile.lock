@@ -7,9 +7,9 @@ PODS:
   - ObjectMapper+Realm (0.5):
     - ObjectMapper
     - RealmSwift
-  - ObjectMapperAdditions/Core (4.0.1):
+  - ObjectMapperAdditions/Core (4.1.0):
     - ObjectMapper
-  - ObjectMapperAdditions/Realm (4.0.1):
+  - ObjectMapperAdditions/Realm (4.1.0):
     - ObjectMapper
     - ObjectMapperAdditions/Core
     - RealmSwift
@@ -31,7 +31,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
-  ObjectMapperAdditions: 196a600816dd7c6696d3bc09183a961c3c09067a
+  ObjectMapperAdditions: db4243e10ebd9abf7e5e7938e4b0a4bbfd840980
   Realm: 7d74ad6c5020432f58fe5e1df90bb6d97b2c7fef
   RealmSwift: b2fa31a09c22e246026766557405505eeaad2b01
 
