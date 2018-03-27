@@ -26,6 +26,8 @@ class WeatherForecastViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView .register(UINib.init(nibName: "WeatherForecastTableViewCell", bundle: nil), forCellReuseIdentifier: "WeatherForecastTableViewCell")
+
+        setupForecast()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,8 @@ class WeatherForecastViewController: UIViewController {
     }
 
     func setupForecast() {
-
+        WeatherDataInterface.requestWeatherForecast { (result) in
+        }
     }
 
 }

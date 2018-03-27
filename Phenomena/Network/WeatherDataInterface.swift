@@ -39,4 +39,13 @@ class WeatherDataInterface {
             completionHandler(realTimeWeather)
         }
     }
+
+    class func requestWeatherForecast(_ completionHandler: @escaping (_ result: WeatherForecast?) -> Void) {
+        guard let url = forecastInterface else { return }
+        Alamofire.request(url).responseObject { (response: DataResponse<WeatherForecast>) in
+            let weatherForecast = response.result.value
+            print(weatherForecast!)
+            completionHandler(weatherForecast)
+        }
+    }
 }
