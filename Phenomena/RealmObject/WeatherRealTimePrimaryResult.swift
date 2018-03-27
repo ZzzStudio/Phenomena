@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 import ObjectMapper
+import ObjectMapperAdditions
+import ObjectMapper_Realm
 
 @objcMembers
 class WeatherRealTimePrimaryResult: Object, Mappable {
@@ -19,7 +21,7 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
     /// 温度
     // I cannot find a way transforming result into Optional Object
 //    dynamic var temperature: Double?
-    dynamic var temperature: Double = 0
+    dynamic var temperature = RealmOptional<Double>()
     
     /// 天气概况
     dynamic var skycon: String?
@@ -45,7 +47,7 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
     
     func mapping(map: Map) {
         status          <- map["status"]
-        temperature     <- map["temperature"]
+        temperature     <- (map["temperature"], RealmOptionalTypeCastTransform())
         skycon          <- map["skycon"]
         pm25            <- map["pm25"]
         cloudRate       <- map["cloudrate"]
