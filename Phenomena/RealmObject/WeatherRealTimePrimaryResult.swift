@@ -27,7 +27,7 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
     dynamic var skycon: String?
     
     /// PM 2.5
-    dynamic var pm25: Double = 0
+    dynamic var pm25 = RealmOptional<Double>()
     
     /// 云量
     dynamic var cloudRate: Double = 0
@@ -49,7 +49,7 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
         status          <- map["status"]
         temperature     <- (map["temperature"], RealmOptionalTypeCastTransform())
         skycon          <- map["skycon"]
-        pm25            <- map["pm25"]
+        pm25            <- (map["pm25"], RealmOptionalTypeCastTransform())
         cloudRate       <- map["cloudrate"]
         humidity        <- map["humidity"]
         precipitation   <- map["precipitation"]
