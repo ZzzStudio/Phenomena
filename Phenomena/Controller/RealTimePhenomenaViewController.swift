@@ -42,9 +42,6 @@ extension RealTimePhenomenaViewController: GeographicInfomationManagerDelegate {
             guard let realTime = result else { return }
             print("---request finished---")
 
-//            if let temperature = realTime.result?.temperature {
-//                self.temperatureLabel.text = "\(temperature)"
-//            }
             self.temperatureLabel.text = "\(realTime.result?.temperature.value ?? 0)"
             self.descriptionLabel.text = realTime.result?.skycon ?? "n/a"
 
