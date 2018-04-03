@@ -75,7 +75,6 @@ extension GeographicInfomationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation = locations.last!
-//        self.coordinate = coordinate
         locationCoordinate = Coordinate.init(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
         print("经度：\(currentLocation.coordinate.longitude)")
         print("纬度：\(currentLocation.coordinate.latitude)")
