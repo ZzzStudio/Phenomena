@@ -14,10 +14,6 @@ class AstronomyDescription: Object, Mappable {
     
     @objc dynamic var time: String?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }
