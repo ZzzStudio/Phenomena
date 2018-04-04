@@ -16,10 +16,6 @@ class WeatherBaseResultStringValue: Object, Mappable {
     @objc dynamic var dateTime: String?
     @objc dynamic var value: String?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

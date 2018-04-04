@@ -20,10 +20,6 @@ class WeatherAlertMessage: Object, Mappable {
     dynamic var location: String?
     dynamic var boundCoordinates: String?
     
-//    override static func primaryKey() -> String? {
-//        return ""
-//    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

@@ -17,10 +17,6 @@ class WeatherBaseResultVectorValue: Object, Mappable {
     dynamic var speed: RealmOptional<Double>?
     dynamic var dateTime: String?
     
-//    override static func primaryKey() -> String? {
-//        return ""
-//    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

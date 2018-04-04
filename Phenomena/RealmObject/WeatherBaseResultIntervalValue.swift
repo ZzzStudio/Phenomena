@@ -17,10 +17,6 @@ class WeatherBaseResultIntervalValue: Object, Mappable {
     var average: RealmOptional<Double>?
     var minimum: RealmOptional<Double>?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

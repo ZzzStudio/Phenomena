@@ -15,10 +15,6 @@ class WeatherBaseResultDoubleValue: Object, Mappable {
     @objc dynamic var dateTime: String?
     var value: RealmOptional<Double>?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }
