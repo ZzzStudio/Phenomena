@@ -17,10 +17,6 @@ class SunDescription: Object, Mappable {
     dynamic var sunset: AstronomyDescription?
     dynamic var sunrise: AstronomyDescription?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }
