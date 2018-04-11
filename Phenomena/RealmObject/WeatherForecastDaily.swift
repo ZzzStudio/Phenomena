@@ -57,10 +57,6 @@ class WeatherForecastDaily: Object, Mappable {
     /// 风
     var wind = List<WindDescription>()
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }
