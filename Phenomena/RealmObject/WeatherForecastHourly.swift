@@ -45,10 +45,6 @@ class WeatherForecastHourly: Object, Mappable {
     /// 温度
     var temperature = List<WeatherBaseResultDoubleValue>()
     
-//    override static func primaryKey() -> String? {
-//        return ""
-//    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

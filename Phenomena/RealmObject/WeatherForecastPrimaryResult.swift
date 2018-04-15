@@ -31,10 +31,6 @@ class WeatherForecastPrimaryResult: Object, Mappable {
     /// “当地政府部门预警信息”
     dynamic var alert: String?
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }

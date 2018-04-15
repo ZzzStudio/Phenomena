@@ -28,10 +28,6 @@ class WeatherForecastMinutely: Object, Mappable {
     /// 0.03-0.25 是小雨，0.25-0.35 是中雨, 0.35 以上是大雨，根据不同地区情况可以有所调整
     var precipitation = List<DoubleObject>()
     
-    //    override static func primaryKey() -> String? {
-    //        return ""
-    //    }
-    
     required convenience init?(map: Map) {
         self.init()
     }
