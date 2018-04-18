@@ -9,11 +9,13 @@
 import Foundation
 import RealmSwift
 import ObjectMapper
+import ObjectMapperAdditions
+import ObjectMapper_Realm
 
 class WeatherBaseResultDoubleValue: Object, Mappable {
     
     @objc dynamic var dateTime: String?
-    var value: RealmOptional<Double>?
+    var value = RealmOptional<Double>()
     
     required convenience init?(map: Map) {
         self.init()
@@ -21,6 +23,6 @@ class WeatherBaseResultDoubleValue: Object, Mappable {
     
     func mapping(map: Map) {
         dateTime    <- map["datetime"]
-        value       <- map["value"]
+        value       <- (map["value"], RealmOptionalTypeCastTransform())
     }
 }

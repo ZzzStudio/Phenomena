@@ -6,6 +6,7 @@
 //  Copyright © 2018年 Zzz Studio. All rights reserved.
 //
 
+import RealmSwift
 import UIKit
 
 class WeatherForecastViewController: UIViewController {
@@ -13,6 +14,9 @@ class WeatherForecastViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var tableView: UITableView!
+
+    private var hourlySkycon = List<WeatherBaseResultStringValue>()
+    private var hourlyTemperature = List<WeatherBaseResultDoubleValue>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,16 @@ class WeatherForecastViewController: UIViewController {
 
     func setupForecast() {
         WeatherDataInterface.requestWeatherForecast { (result) in
+            log.debug("result")
+            guard let forecast = result else { return }
+//            guard let skycon = forecast.result?.hourly?.skycon else
+            if let hourlySkycon = forecast.result?.hourly?.skycon {
+                self.hourlySkycon = hourlySkycon
+            }
+            if let hourlyTemperature = forecast.result?.hourly?.temperature {
+                self.hourlyTemperature = hourlyTemperature
+            }
+            self.collectionView.reloadData()
         }
     }
 

@@ -18,4 +18,10 @@ class LatestWeatherCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    func configCellWith(_ skycon: WeatherBaseResultStringValue, temperature: WeatherBaseResultDoubleValue) {
+        timeLabel.text = skycon.dateTime
+        descriptionLabel.text = skycon.value
+        tempetatureLabel.text = "\(temperature.value)"
+    }
+
 }

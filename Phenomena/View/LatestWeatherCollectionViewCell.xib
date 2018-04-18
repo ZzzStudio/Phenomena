@@ -13,28 +13,28 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LatestWeatherCollectionViewCell" id="gTV-IL-0wX" customClass="LatestWeatherCollectionViewCell" customModule="Phenomena" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="40" height="141"/>
+            <rect key="frame" x="0.0" y="0.0" width="162" height="141"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="40" height="141"/>
+                <rect key="frame" x="0.0" y="0.0" width="162" height="141"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLH-FB-8fj">
-                        <rect key="frame" x="-2" y="12" width="42" height="21"/>
+                        <rect key="frame" x="60" y="12" width="42" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifg-pH-O6Y">
-                        <rect key="frame" x="-2" y="50" width="42" height="21"/>
+                        <rect key="frame" x="60" y="60" width="42" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-xo-CNM">
-                        <rect key="frame" x="0.0" y="100" width="42" height="21"/>
+                        <rect key="frame" x="60" y="110" width="42" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -43,12 +43,13 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="162" height="141"/>
             <connections>
                 <outlet property="descriptionLabel" destination="Ifg-pH-O6Y" id="qsU-mp-8kP"/>
                 <outlet property="tempetatureLabel" destination="jeh-xo-CNM" id="eQ8-wK-FKM"/>
                 <outlet property="timeLabel" destination="mLH-FB-8fj" id="EnS-kG-YLQ"/>
             </connections>
-            <point key="canvasLocation" x="-65" y="-98"/>
+            <point key="canvasLocation" x="-4" y="-98.5"/>
         </collectionViewCell>
     </objects>
 </document>

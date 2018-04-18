@@ -19,9 +19,6 @@ class WeatherRealTimePrimaryResult: Object, Mappable {
     dynamic var status: String?
     
     /// 温度
-    // I cannot find a way transforming result into Optional Object
-    // Now can
-//    dynamic var temperature: Double?
     dynamic var temperature = RealmOptional<Double>()
     
     /// 天气概况
