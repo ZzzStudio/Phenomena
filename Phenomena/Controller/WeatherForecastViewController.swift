@@ -43,6 +43,7 @@ class WeatherForecastViewController: UIViewController {
             log.debug("result")
             guard let forecast = result else { return }
 //            guard let skycon = forecast.result?.hourly?.skycon else
+            
             if let hourlySkycon = forecast.result?.hourly?.skycon {
                 self.hourlySkycon = hourlySkycon
             }
