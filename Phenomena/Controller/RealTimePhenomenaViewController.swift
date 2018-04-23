@@ -44,7 +44,6 @@ extension RealTimePhenomenaViewController: GeographicInfomationManagerDelegate {
             self.temperatureLabel.text = "\(realTime.result?.temperature.value ?? 0)"
             self.descriptionLabel.text = realTime.result?.skycon ?? "n/a"
 
-
             self.pm25Label.text = "\(realTime.result?.pm25.value ?? 0)"
             self.cloudinessLabel.text = "\(realTime.result?.cloudRate ?? 0)"
             self.humidityLabel.text = "\(realTime.result?.humidity ?? 0)"
